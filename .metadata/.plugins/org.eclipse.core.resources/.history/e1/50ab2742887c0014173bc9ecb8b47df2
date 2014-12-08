@@ -1,0 +1,12 @@
+package cviceni2;
+
+import java.util.Date;
+
+public interface Printer { void print(String msg);  }
+
+public class GenericPrinter implements Printer {
+        public void print(String msg){
+          System.out.println("I am in method Printer of class GenericPrinter");
+        }
+}
+

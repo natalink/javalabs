@@ -1,0 +1,28 @@
+package cviceni2;
+
+//import java.util.Date;
+
+interface Printer1 { void print(String msg);  }
+
+class GenericPrinter implements Printer1 {
+        public void print(String msg){
+          System.out.println("Generic printer");
+        }
+}
+
+class Printer {
+	static void u(GenericPrinter b) {
+		b.print("blah-blah"); 
+	
+	}
+	
+	public static void main(String[] args){
+		GenericPrinter if2 = new GenericPrinter();
+		u(if2);
+
+		
+	}
+}
+
+
+
