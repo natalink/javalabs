@@ -24,12 +24,12 @@ class TypePrinter extends GenericPrinter {
 }
 
 class Logger {
+	Printer1 myPrinter;
 	public void addPrinter(Printer1 p){
-		//???????????????????????????????????????WHAT SHALL I DO HERE?
-		
+		myPrinter =p;
 	}
-	public void log(int level, String msg){
-		
+	public void log(String msg){
+		myPrinter.print(msg);
 	}
 	public void setLevel(int level){}
 }
@@ -44,9 +44,12 @@ class Printer {
 		TimestampPrinter tsp = new TimestampPrinter();
 		TypePrinter tp = new TypePrinter();
 //		u(gp2);
-		u(tsp);
+//		u(tsp);
 //		u(tp);
-		
+		Printer1 printer = new GenericPrinter();
+		Logger logger = new Logger();
+		logger.addPrinter(printer);
+		logger.log("A log from Logger,why does it print GenericPrinter?");
 	}
 	
 }
