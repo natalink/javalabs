@@ -23,9 +23,16 @@ class TypePrinter extends GenericPrinter {
 	}
 }
 
-//class Logger {
-//	public void addPrinter(p : Printer1){}
-//}
+class Logger {
+	public void addPrinter(Printer1 p){
+		//???????????????????????????????????????WHAT SHALL I DO HERE?
+		
+	}
+	public void log(int level, String msg){
+		
+	}
+	public void setLevel(int level){}
+}
 
 class Printer {
 	static void u(GenericPrinter b) {
@@ -33,12 +40,13 @@ class Printer {
 	}
 
 	public static void main(String[] args){
-		GenericPrinter if2 = new GenericPrinter();
-		TimestampPrinter ts = new TimestampPrinter();
+		GenericPrinter gp2 = new GenericPrinter();
+		TimestampPrinter tsp = new TimestampPrinter();
 		TypePrinter tp = new TypePrinter();
-		u(if2);
-		u(ts);
-		u(tp);
+//		u(gp2);
+		u(tsp);
+//		u(tp);
+		
 	}
 	
 }
