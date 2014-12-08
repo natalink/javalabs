@@ -1,15 +1,17 @@
 package cviceni2;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 
 interface Printer1 { void print(String msg);  }
 interface MyCollection {
 	void add(Object o);
-//	Object get(int i);
-//	void remove(Object o);
+	Object get(int i);
+	void remove(Object o);
 //	void remove(int i);
 }
 
@@ -30,6 +32,31 @@ class CollectionImplementation implements MyCollection{
 		System.out.println("Array after adding: " + Arrays.toString(arr));
 		idx++;		
 	}
+//	Integer i; 	public Integer get(Integer i){ return i;	} //was not sure what to do here
+	Integer idx2 = 0;
+	public void remove(Object o){
+		List result = new LinkedList();
+		System.out.println("Array before removing: " + o + Arrays.toString(arr));
+		if (idx2 >= arr.length){
+			Object[] arr2 = new Object[arr.length+10];
+			for (int i = 0; i < arr.length; i++){
+				arr[2] = arr[i];
+			}
+			arr = arr2;
+		} 
+		if (arr[idx2] == null || !arr[idx2].equals(o)){
+			result.add(arr[idx2]);
+			idx2++;
+		} 
+		System.out.println("RESULT:" + result);
+	}
+
+	@Override
+	public Object get(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }
 
 class GenericPrinter implements Printer1 {
@@ -71,6 +98,8 @@ class Printer {
 		CollectionImplementation collection = new CollectionImplementation();
 		collection.add("a");
 		collection.add("b");
+//		System.out.println(collection.get(4));
+		collection.remove("a");
 		GenericPrinter gp2 = new GenericPrinter();
 		TimestampPrinter tsp = new TimestampPrinter();
 		TypePrinter tp = new TypePrinter();
