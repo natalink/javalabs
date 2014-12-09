@@ -7,7 +7,7 @@ public class RoundBuffer {
 	ArrayList<String> b;// = {"s1","s2","s3","s4","s5"};
 	
 	public RoundBuffer() {
-		System.out.println("hi");
+		System.out.println("hi, i'm supposed to be a random buffer");
 		b = new ArrayList<String>();
 	}
 

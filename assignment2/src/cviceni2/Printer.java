@@ -12,7 +12,7 @@ interface MyCollection {
 	void add(Object o);
 	Object get(int i);
 	void remove(Object o);
-//	void remove(int i);
+	void remove(int i);
 }
 
 class CollectionImplementation implements MyCollection{
@@ -32,29 +32,28 @@ class CollectionImplementation implements MyCollection{
 		System.out.println("Array after adding: " + Arrays.toString(arr));
 		idx++;		
 	}
-//	Integer i; 	public Integer get(Integer i){ return i;	} //was not sure what to do here
-	Integer idx2 = 0;
+	Integer i; 	
+	public Integer get(Integer i){ 
+		return i;	
+	} //was not sure what to do here
+
 	public void remove(Object o){
 		List result = new LinkedList();
 		System.out.println("Array before removing: " + o + Arrays.toString(arr));
-		if (idx2 >= arr.length){
-			Object[] arr2 = new Object[arr.length+10];
-			for (int i = 0; i < arr.length; i++){
-				arr[2] = arr[i];
-			}
-			arr = arr2;
-		} 
-		if (arr[idx2] == null || !arr[idx2].equals(o)){
-			result.add(arr[idx2]);
-			idx2++;
-		} 
+		for(int idx2 = 0; idx2 < arr.length; idx2++){
+			if (arr[idx2] == null || !arr[idx2].equals(o)){
+				result.add(arr[idx2]);
+			
+			} 
+		}
+	
 		System.out.println("RESULT:" + result);
 	}
 
 	@Override
-	public Object get(int i) {
+	public void remove(int i) {
 		// TODO Auto-generated method stub
-		return null;
+		return;
 	}
 	
 }

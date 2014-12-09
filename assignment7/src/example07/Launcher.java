@@ -1,26 +1,26 @@
 package example07;
 
+import java.util.Random;
+
 public class Launcher {
 
 	public static void main(String[] args) {
 		
 		RoundBuffer buffer = new RoundBuffer();
-		buffer.printMe();
+		Random rand = new Random();
 		
-		buffer.put("s1");
-		buffer.put("s2");
-		buffer.put("s3");
-		buffer.put("s4");
-		buffer.put("s5");
-		buffer.printMe();
-		
-		int length1 = buffer.length();
-		for(int i=0;i<length1;i++){
-			System.out.println(i);
-			buffer.get(i);
+
+		for (int i = 0; i <100; i++){
+			char c = (char)(rand.nextInt(26) + 'a');
+			String rand_str = Character.toString(c); 
+			buffer.put(rand_str);
+			
 		}
-		
 		buffer.printMe();
+		int length1 = buffer.length();
+		System.out.println(buffer.get(4));
+		System.out.println(length1);
+		
 	}
 
 }
