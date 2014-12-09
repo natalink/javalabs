@@ -100,7 +100,7 @@ class Printer {
 //		System.out.println(collection.get(4));
 		collection.remove("a");
 		GenericPrinter gp2 = new GenericPrinter();
-		TimestampPrinter tsp = new TimestampPrinter();
+		Printer1 tsp = new TimestampPrinter();
 		TypePrinter tp = new TypePrinter();
 //		u(gp2);
 //		u(tsp);

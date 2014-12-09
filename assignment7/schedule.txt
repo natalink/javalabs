@@ -1,0 +1,10 @@
+7 havelunch
+2 washface
+4 study
+5 study
+8 study
+9 study
+10 gohome
+3 gouniversity
+6 study
+1 getup
