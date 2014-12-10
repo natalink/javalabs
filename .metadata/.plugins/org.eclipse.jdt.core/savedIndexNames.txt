@@ -1,3 +1,4 @@
-INDEX VERSION 1.127+/afs/ms.mff.cuni.cz/u/k/klyun6am/project/src/cz/cuni/mff/java/javalabs/.metadata/.plugins/org.eclipse.jdt.core
-1003284062.index
+INDEX VERSION 1.127+/home/ufaladmin/java/javalabs/.metadata/.plugins/org.eclipse.jdt.core
+1288427208.index
 1269174993.index
+1003284062.index

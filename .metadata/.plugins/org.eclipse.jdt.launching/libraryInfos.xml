@@ -38,7 +38,7 @@
 <entry path="/opt/oracle-jdk-bin-1.7.0.72/jre/lib/endorsed"/>
 </endorsedDirs>
 </libraryInfo>
-<libraryInfo home="/usr/lib/jvm/java-7-oracle" version="1.7.0_72">
+<libraryInfo home="/usr/lib/jvm/java-7-oracle" version="1.7.0_60">
 <bootpath>
 <entry path="/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar"/>
 <entry path="/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar"/>
