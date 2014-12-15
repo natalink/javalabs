@@ -1,10 +1,10 @@
-7 havelunch
-2 washface
-4 study
-5 study
-8 study
-9 study
-10 gohome
-3 gouniversity
-6 study
-1 getup
+7:have lunch
+2:wash face
+4:study
+5:study
+3:go university
+6:study
+1:get up
+9:jnkd
+8:jnkd
+10:jk lk

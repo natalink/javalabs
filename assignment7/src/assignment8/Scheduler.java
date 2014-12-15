@@ -1,33 +1,28 @@
 package assignment8;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Hashtable;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
 
-class PriorityA{
-	static void addPrio{
-		
-	}
-	static void addMsg
-}
-
-class SortDecreasinglyL{}
-class SortIncreasinglyR{}
-class Interactive{}
-
-
 public class Scheduler {
 
+	static Hashtable table;
+	
 	static List<String> readFromFile(String path){
 		List<String> list = new ArrayList<String>(); //what does it do?
 		File file = new File(path);
@@ -52,31 +47,80 @@ public class Scheduler {
 		    }
 			
 		}
-		return list;
-		
+		return list;		
 	}
-	public static void main(String[] args) {
+	
+	private static void listPriorities() {
+		System.out.println(table); //WHY IT IS ALREADY SORTED????
+		for (Object key: table.keySet().toArray()) {
+			Object value = table.get(key);
+			System.out.println("Priority: " + key + " Value: " + value);
+		} 
+	}
+	
+	private static void priorDecreasingly(){
+		System.out.println( table.keySet().toArray() );
+		for (Object key: table.keySet().toArray() ) {
+			//System.out.println("Priority: " + key );
+		} 
+		
+	
+	}
+	
+	public static void main(String[] args) throws IOException {
+		
+		System.out.println(args[0]);
+		//System.out.println(args[1]);
+		//System.out.println(args[2]);
+		
+		table = new Hashtable();
+		
 		List<Integer> list = new ArrayList<Integer>();
 	    //System.out.println(readFromFile("schedule.txt"));
 	    List<String> text = readFromFile("schedule.txt");
 	    
 	    for (String s : text){
-	    	StringTokenizer tokenizer = new StringTokenizer(s);
-	    	System.out.println(s);
+	    	StringTokenizer tokenizer = new StringTokenizer(s, ":"); // change schedule to tokenize with :
+	    	
 	    	while (tokenizer.hasMoreElements()){
+	    		//String pri = tokenizer.nextElement().toString();
 	    		Integer pri = Integer.parseInt(tokenizer.nextElement().toString());
 	    		String msg = tokenizer.nextElement().toString();
-	    		System.out.println("Pri: "+ pri + " MSG: " + msg);
-	    		
-	    		Hashtable table = new Hashtable();
 	    		table.put(pri, msg);
 	    		
-	    	}
+	    	} //System.out.println(table);
 	    }
+	    if(args[0].equals("-a")) { //get prior and msg from the console, put them to the file/table
+	    	//String pristring = args[1];
+	    	int prior = Integer.parseInt(args[1]);
+	    	String msg = args[2];
+	    	//public Integer getKey(Integer key);
+	    	if (table.containsKey(prior)){
+	    		System.out.println("This priority is already in the file: " + prior + "Can't add it");
+	    		
+	        }
+	    	else{
+	    		String filename = "schedule.txt";
+	    		FileWriter fw = new FileWriter(filename, true);
+	    		System.out.println("adding priority "+ prior+ ", message: " + msg+ " To the file: " + filename);
+	    		//fw.write("\n");
+	    		fw.write(prior + ":" + msg);
+	    		fw.close();
+	    	}
 	    
+	    }
+	    if(args[0].equals("-l")) {
+	    	listPriorities();
+	    }
+	    if(args[0].equals("-r")) {
+	    	priorDecreasingly();
+	    }
+	    if(args[0].equals("-d")) {
+	    //	priorDecreasingly();
+	    	//Delete: attach indexes to table; ask user which indx to delete
+	    }
 //		while( (str = text.readLine()) ){
 //			
 //		}
 	}
-
 }
