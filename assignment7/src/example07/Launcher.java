@@ -10,12 +10,13 @@ public class Launcher {
 		Random rand = new Random();
 		
 
-		for (int i = 0; i <100; i++){
+		for (int i = 0; i <10; i++){
 			char c = (char)(rand.nextInt(26) + 'a');
 			String rand_str = Character.toString(c); 
 			buffer.put(rand_str);
 			
 		}
+		
 		buffer.printMe();
 		int length1 = buffer.length();
 		System.out.println(buffer.get(4));

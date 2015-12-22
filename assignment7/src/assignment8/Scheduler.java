@@ -1,5 +1,9 @@
 package assignment8;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Scanner;
@@ -48,15 +52,21 @@ public class Scheduler {
 	
 	static List<String> list_table = new ArrayList<String>(); 
 	private static void listPriorities() {
+<<<<<<< HEAD
 		
 		System.out.println(table);
+=======
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 		
 		for (Object key: table.keySet().toArray()) {
 			Object value = table.get(key);
 			String priormessage = key + ":" + value;
 			list_table.add(priormessage);
 		} 
+<<<<<<< HEAD
 		System.out.println(list_table);
+=======
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 	} 
 	
 	
@@ -103,7 +113,10 @@ public class Scheduler {
 	    
 	    }
 	    if(args[0].equals("-l")) {
+<<<<<<< HEAD
 	    	System.out.println("Next is the list of messages and their priorities: ");
+=======
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 	    	listPriorities();
 	    }
 	    if(args[0].equals("-r")) {
@@ -126,13 +139,19 @@ public class Scheduler {
 	        for (int i = 1; i < table.size() ; i++){
 	        	if (i != j){
 	        		System.out.println(list_table.get(i));
+<<<<<<< HEAD
 	        		table.remove(table.get(i));
+=======
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 	        		printwriter.println(list_table.get(i));
 	        	}
 	        }
 	        printwriter.flush();
 	        printwriter.close();
+<<<<<<< HEAD
 	        System.out.println("TABLE WITHOUT THE CHOSEN PRIORITY:" + table);
+=======
+>>>>>>> 45588a42190050de6fe31f4679a831d69004b556
 	        System.out.println("Success. You can find the changed data here: " + tempFile);
 	     }
 	        
